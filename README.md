@@ -58,7 +58,7 @@ To detect over-parameterization and redundant dynamics across the four identifie
 ### 6. Complexity Criteria (`SURE`, `AIC`, `BIC`)
 To balance goodness-of-fit (loss function $V$) against model complexity ($d$ estimated parameters over $N$ samples), three information criteria are computed:
 * **SURE** (`sure.m`): $\text{SURE} = V \left(1 + \frac{2d}{N}\right)$
-* **AIC** (built-in `aic`): Akaike's Information Criterion
+* **AIC** (built-in `aic`): $\text{AIC} = N \ln(V) + 2d$ *(or $\ln(V) + \frac{2d}{N}$ in per-sample log scale)*
 * **BIC** (`bic.m`): $\text{BIC} = \ln(V) + \frac{d \ln(N)}{N}$
 
 ### 7. Hold-Out Cross-Validation ($h$-Step Ahead Prediction)
